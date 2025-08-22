@@ -312,7 +312,7 @@
             {
               "name": "data",
               "description": "Данные для вывода",
-              "type": "int | char[]"
+              "type": "int | char[] | float"
             }
           ]
         },
@@ -323,7 +323,7 @@
             {
               "name": "data",
               "description": "Данные для вывода",
-              "type": "int | char[]"
+              "type": "int | char[] | float"
             }
           ]
         },
@@ -1041,6 +1041,82 @@
           "img": "common/arraySize.svg",
           "type": "uint16_t",
           "description": "Размер массива."
+        }
+      }
+    },
+    "Dht": {
+      "description": "Датчик температуры и влажности",
+      "img": "",
+      "signals": {},
+      "constructorParameters": {
+        "pin": {
+          "type": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+          "description": "Пин, к которому подключен датчик"
+        },
+        "variation": {
+          "type": ["DHT11", "DHT22"],
+          "description": "тип датчика"
+        }
+      },
+      "methods": {},
+      "buildFiles": ["Dht.h", "Dht.ino"],
+      "importFiles": ["Dht.h"],
+      "singletone": false,
+      "loopActions": ["update"],
+      "initializationParameters": {},
+      "initializationFunction": "init",
+      "variables": {
+        "temperature": {
+          "img": "arduino/difference.svg",
+          "type": "float",
+          "description": ""
+        },
+        "humidity": {
+          "img": "arduino/difference.svg",
+          "type": "float",
+          "description": ""
+        }
+      }
+    },
+    "RFID": {
+      "description": "Датчик температуры и влажности",
+      "img": "",
+      "signals": {
+        "isReady": {
+          "alias": "готов",
+          "img": "arduino/isPressed.svg",
+          "description": "Создает сигнал, если кнопка была нажата",
+          "checkMethod": "isReady"
+        }
+      },
+      "constructorParameters": {
+        "ss_pin": {
+          "type": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+          "description": "Пин, к которому подключен датчик"
+        },
+        "rst_pin": {
+          "type": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+          "description": "тип датчика"
+        }
+      },
+      "methods": {
+        "updateContent": {
+          "img": "common/set-value.svg",
+          "description": "Установить значение элементу с заданным индексом",
+          "parameters": []
+        }
+      },
+      "buildFiles": ["RFID.h", "RFID.ino"],
+      "importFiles": ["RFID.h"],
+      "singletone": false,
+      "loopActions": [],
+      "initializationParameters": {},
+      "initializationFunction": "init",
+      "variables": {
+        "content": {
+          "img": "arduino/difference.svg",
+          "type": "String",
+          "description": ""
         }
       }
     }
