@@ -20,4 +20,4 @@ def nt_decode(
     data: bytes,
 ) -> str:
     """Decode bytes as cp1251."""
-    return data.decode('cp1251')
+    return data.decode('utf-8')
