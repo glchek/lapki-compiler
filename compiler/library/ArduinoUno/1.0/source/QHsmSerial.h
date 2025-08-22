@@ -8,8 +8,12 @@ class QHsmSerial {
         static void read();
         static void print(char value[]);
         static void print(int value);
+        static void print(float value);
+        static void print(String value);
         static void println(char value[]);
         static void println(int value);
+        static void println(float value);
+        static void println(String value);
         static bool byteReceived();
         static bool noByteReceived();
         static int lastByte;

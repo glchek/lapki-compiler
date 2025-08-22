@@ -24,6 +24,15 @@ void QHsmSerial::print(int msg){
   Serial.print(msg);
 };
 
+void QHsmSerial::print(float msg){
+  Serial.print(msg);
+};
+
+void QHsmSerial::print(String msg){
+  Serial.print(msg);
+};
+
+
 void QHsmSerial::println(char msg[]){
   Serial.println(msg);
 };
@@ -31,6 +40,14 @@ void QHsmSerial::println(char msg[]){
 void QHsmSerial::println(int msg){
   Serial.println(msg);
 };
+
+void QHsmSerial::println(float msg){
+  Serial.println(msg);
+};
+
+void QHsmSerial::println(String msg){
+  Serial.println(msg);
+}
 
 
 void QHsmSerial::init(unsigned long baud){
