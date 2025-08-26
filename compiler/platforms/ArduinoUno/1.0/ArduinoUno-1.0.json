@@ -1046,7 +1046,7 @@
     },
     "Dht": {
       "description": "Датчик температуры и влажности",
-      "img": "",
+      "img": "arduino/dht.svg",
       "signals": {},
       "constructorParameters": {
         "pin": {
@@ -1067,12 +1067,12 @@
       "initializationFunction": "init",
       "variables": {
         "temperature": {
-          "img": "arduino/difference.svg",
+          "img": "arduino/temperature.svg",
           "type": "float",
           "description": ""
         },
         "humidity": {
-          "img": "arduino/difference.svg",
+          "img": "arduino/humidity.svg",
           "type": "float",
           "description": ""
         }
@@ -1080,11 +1080,11 @@
     },
     "RFID": {
       "description": "Датчик температуры и влажности",
-      "img": "",
+      "img": "arduino/mfrc522.svg",
       "signals": {
         "isReady": {
-          "alias": "готов",
-          "img": "arduino/isPressed.svg",
+          "alias": "Обнаружил карту",
+          "img": "common/onSignal.svg",
           "description": "Создает сигнал, если кнопка была нажата",
           "checkMethod": "isReady"
         }
@@ -1101,7 +1101,7 @@
       },
       "methods": {
         "updateContent": {
-          "img": "common/set-value.svg",
+          "img": "common/onStep.svg",
           "description": "Установить значение элементу с заданным индексом",
           "parameters": []
         }
@@ -1114,7 +1114,7 @@
       "initializationFunction": "init",
       "variables": {
         "content": {
-          "img": "arduino/difference.svg",
+          "img": "arduino/byteContent.svg",
           "type": "String",
           "description": ""
         }
